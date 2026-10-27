@@ -9,3 +9,11 @@ function logoutAndCloseBrowser(){
 }
 launchBrowserAndLogin(); //Logging in to application
 logoutAndCloseBrowser(); //Logging out and closing the browser
+
+let countryOfOrigin = Symbol();//only single symbol
+let productInfo ={
+    productName : "vivo x90",
+    price:60000,
+    [countryOfOrigin] : "China"
+}
+console.log(productInfo);

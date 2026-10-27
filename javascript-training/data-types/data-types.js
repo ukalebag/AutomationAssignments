@@ -58,8 +58,13 @@ console.log(salary); //null
 console.log(typeof salary); //object
 
 //6. Symbol data type to store unique values(unique hidden identifier)
-
-
+let countryOfOrigin = Symbol(); //only single symbol
+let productInfo ={
+    productName : "vivo x90",
+    price:60000,
+    [countryOfOrigin] : "China"
+}
+console.log(productInfo);
 //**********Non-primitive data types(mutable data types modify the original value)
 //1. Object data type to store key-value pairs
 let person={
@@ -151,5 +156,19 @@ empDetails.set("123", "Poonam");
 empDetails.set("124", "solankar");
 empDetails.set("124", "Kalebag");
 empDetails.set("125", "Poonam");
+empDetails.set("126", "Poonam");
+empDetails.delete(126);
+console.log(empDetails.get("124")); //Kalebag
+console.log(empDetails.size); //3
 console.log(empDetails); //Map(3) { '123' => 'Kalebag', '124' => 'solankar' }
 //6. Date data type to store date and time values
+let date = new Date();
+console.log(date); //2024-06-19T10:30:00.000Z
+console.log(date.getFullYear()); //2026
+console.log(date.getMonth()+1); //10 month value are from 0-11, so we need to add 1 to get correct month
+console.log(date.getDate()); //26
+console.log(date.getDay()); //1day value are from 0-6 where 0 is for sunday
+console.log(date.getHours()); //11
+console.log(date.getMinutes());//15
+console.log(date.getSeconds());//23
+
