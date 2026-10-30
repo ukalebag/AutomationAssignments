@@ -17,3 +17,4 @@ let productInfo ={
     [countryOfOrigin] : "China"
 }
 console.log(productInfo);
+
